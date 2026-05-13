@@ -15,7 +15,8 @@ DRAGON3_IMG = 'src/dragon_negro.png'
 FUEGO_IMG = 'src/fuego.png'
 # FUENTE
 FONT_FILE = 'src/fuente.ttf'  
-BGM = 'music.mp3' 
+BGM = 'src/music.mp3' 
+DISPARO = 'src/flecha.ogg'
 # COLORES
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)

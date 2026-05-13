@@ -6,9 +6,11 @@ import math
 init()
 font.init()
 
-#mixer.music.load (BGM) 
-#mixer.music.play()
-#mixer.init() #musica
+mixer.music.load (BGM) 
+mixer.music.play()
+mixer.init() #musica
+sonido_disparo = mixer.Sound(DISPARO) 
+
 
 puntos = 0
 vidas = 20
@@ -225,7 +227,8 @@ def subir_nivel():
     
 
 def disparar_flecha(x, y, target_x, target_y):
-    flechas_group.add(Flecha(flecha_img, x, y, target_x, target_y))  
+    flechas_group.add(Flecha(flecha_img, x, y, target_x, target_y))
+    sonido_disparo.play()
 
 while run:
     mouse_pos = mouse.get_pos()
@@ -329,14 +332,14 @@ while run:
         texto_nivel = font_1.render(f'NIVEL: {nivel}', 1, VIOLET)
         pantalla.blit(texto_nivel, (10, 60))
         
-        texto_dragones = font_1.render(f'DRAGONES: {dragones_derrotados_nivel}/5', 1, WHITE)
+        texto_dragones = font_1.render(f'DRAGONES: {dragones_derrotados_nivel}/5', 1, VIOLET)
         pantalla.blit(texto_dragones, (10, 100))
         
         texto_vidas = font_1.render(f'VIDAS: {vidas}', 1, GREEN)
-        pantalla.blit(texto_vidas, (10, 140))
+        pantalla.blit(texto_vidas, (650, 60))
         
         texto_flechas = font_1.render(f'FLECHAS: {flechas}', 1, WHITE)
-        pantalla.blit(texto_flechas, (10, 170))
+        pantalla.blit(texto_flechas, (650, 20))
         
         mostrar_mira(mouse_pos)
         
