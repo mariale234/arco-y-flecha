@@ -12,13 +12,14 @@ BULLET_IMG = 'src/flecha.png'
 DRAGON1_IMG = 'src/dragon_rojo.png'
 DRAGON2_IMG = 'src/dragon_morado.png'
 DRAGON3_IMG = 'src/dragon_negro.png'
-
+FUEGO_IMG = 'src/fuego.png'
 # FUENTE
 FONT_FILE = 'src/fuente.ttf'  
-
+BGM = 'music.mp3' 
 # COLORES
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
-GREEN = (0, 255, 0)
+GREEN = (102, 255, 0)
 YELLOW = (255, 255, 0)
+VIOLET = (120, 40, 140)
